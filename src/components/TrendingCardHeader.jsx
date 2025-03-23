@@ -2,6 +2,7 @@
 
 import React from "react";
 import MetricsItem from "./MetricsItem";
+import userIcon from '../assets/images/userIcon.svg'
 
 const TrendingCardHeader = () => {
   return (
@@ -12,11 +13,11 @@ const TrendingCardHeader = () => {
             DROP
           </h2>
           <div className="flex gap-2.5 mt-3 text-sm">
-            <div className="flex gap-1.5 text-zinc-800">
+            <div className="flex items-center gap-1.5 text-zinc-800">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f4a1e0a8f127095d56def62ca296b2b8d7ce9e8?placeholderIfAbsent=true&apiKey=e36e175e43754e0299b4050c1061cdb5"
                 alt="Star icon"
-                className="object-contain shrink-0 self-start w-3 rounded-none aspect-square"
+                className="object-contain shrink-0 self-center w-3 rounded-none aspect-square"
               />
               <span>4.5</span>
             </div>
@@ -31,12 +32,24 @@ const TrendingCardHeader = () => {
               label="Views"
               iconClassName="w-3.5 aspect-[1.4]"
             />
+            <MetricsItem
+              iconSrc={userIcon}
+              count="400"
+              label="Visits"
+              iconClassName="w-3.5 aspect-[1.4]"
+            />
           </div>
         </div>
-        <div className="flex gap-2 self-end mt-6 text-sm">
+        
+        {/* <div className="flex items-center gap-2 self-end mt-6 text-sm">
+        <img
+          src={userIcon}
+          alt="Upvote icon"
+          className="object-contain shrink-0 self-start w-2 aspect-square"
+        />
           <span className="text-zinc-500">400</span>
           <span className="text-zinc-800">Visits</span>
-        </div>
+        </div> */}
       </div>
       <div className="flex gap-1.5 self-end px-2.5 py-1.5 mt-7 text-xs leading-none text-white bg-sky-600 rounded-2xl">
         <img

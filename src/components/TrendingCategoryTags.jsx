@@ -9,7 +9,7 @@ const TrendingCategoryTags = ({ categories }) => {
       {categories.map((category, index) => (
         <span
           key={index}
-          className="px-2.5 py-2 bg-black bg-opacity-10 rounded-[44px]"
+          className="px-2.5 py-1 bg-black bg-opacity-10 rounded-[44px]"
         >
           {category}
         </span>

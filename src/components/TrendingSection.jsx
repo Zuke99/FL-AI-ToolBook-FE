@@ -42,10 +42,10 @@ const TrendingSection = () => {
   }, [activeTab]);
 
   return (
-    <div className='mx-10 mb-5'>
-        <p className='text-[26px] text-[#303030] font-semibold mb-2'>Trending AIs</p>
+    <div className='mx-8 mb-5'>
+        <p className='text-[26px] text-[#303030] font-semibold mb-4'>Trending AIs</p>
         <div className="flex flex-col w-full">
-      <div className="px-5 pt-28">
+      <div className="px-5 ">
         <div className="flex flex-col w-full">
           <nav className="flex gap-8 text-base leading-4">
             {tabs.map((tab) => (
@@ -68,8 +68,9 @@ const TrendingSection = () => {
         </div>
       </div>
     </div>
-    <div className="flex w-full mt-2">
+    <div className="flex w-full gap-2 mt-2">
   <div className="w-4/5">
+    <TrendingCard />
     <TrendingCard />
     <TrendingCard />
     <TrendingCard />

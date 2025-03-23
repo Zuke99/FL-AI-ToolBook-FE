@@ -2,7 +2,11 @@
 import React from "react";
 import ViewsCounter from "./ViewsCounter";
 import ActionButton from "./ActionButton";
-
+import StatButton from "./StatButton";
+import userIcon from '../assets/images/userIcon.svg';
+import viewsIcon from '../assets/images/viewsIcon.svg';
+import savedIcon from '../assets/images/savedIcon.svg';
+import upvoteicon from '../assets/images/upvoteicon.svg';
 function AIToolCard() {
   return (
     <article className="rounded-none max-w-60 mb-3">
@@ -12,36 +16,49 @@ function AIToolCard() {
           alt="AI Tool"
           className="object-contain w-full rounded-xl aspect-[1.72]"
         />
-        <div className="flex flex-col items-start px-5 mt-5 w-full">
+        <div className="flex flex-col items-start px-2 mt-5 w-full">
           <h2 className="text-lg font-bold leading-none text-zinc-800">
             AI Tool Name
           </h2>
+          <div className="flex gap-2">
+                  <div className="flex justify-start flex-col gap-1 w-full items-center">
+                  <div className="flex font-normal gap-1 items-center self-start mt-4 whitespace-nowrap">
+                    <img
+                      src={viewsIcon}
+                      className="object-contain shrink-0 self-center aspect-[1.45] w-[13px]"
+                      alt=""
+                    />
+                    <span className="text-xs text-zinc-500">1.2k</span>
+                    <span className="text-xs text-zinc-800">Views</span>
+                  </div>
+                  <StatButton
+                icon={savedIcon}
+                count="1.4k"
+                label="Saved"
+              />
+                 
+                  </div>
+                 <div className="flex justify-start flex-col gap-1 items-center w-full">
+              
+              <div className="flex font-normal gap-1 items-center self-start mt-4 whitespace-nowrap">
+                <img
+                      src={userIcon}
+                      className="object-contain shrink-0 self-center aspect-[1.45] w-[13px]"
+                      alt=""
+                    />
+                <span className=" text-xs text-zinc-500">400</span>
+                <span className=" text-xs text-zinc-800">
+                Visits
+              </span>
+                </div>
+              <StatButton
+                icon={upvoteicon}
+                label="Upvoted"
+              />
+                </div>
+                  </div>
 
-          <div className="flex gap-5 mt-4 whitespace-nowrap">
-            <ViewsCounter
-              count="1.2k"
-              label="Views"
-              iconUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/e61e1465487aa2909ceeab5c3450519033b2d119?placeholderIfAbsent=true&apiKey=e36e175e43754e0299b4050c1061cdb5"
-            />
-            <div className="flex gap-1 self-start text-xs">
-              <span className="grow text-zinc-500">400</span>
-              <span className="text-zinc-800">Visits</span>
-            </div>
-          </div>
-
-          <div className="flex gap-5 mt-2.5 text-xs leading-tight text-white whitespace-nowrap">
-            <ActionButton
-              iconUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/7aace61d0a3e57e771b655c06e087cf31651bc03?placeholderIfAbsent=true&apiKey=e36e175e43754e0299b4050c1061cdb5"
-              count="1.4k"
-              label="Saved"
-            />
-            <ActionButton
-              iconUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/718afe4981e0d4c0e8daa28a68aacf917a2bf162?placeholderIfAbsent=true&apiKey=e36e175e43754e0299b4050c1061cdb5"
-              label="Upvoted"
-              showCount={false}
-            />
-          </div>
-
+        
           <p className="self-stretch mt-4 text-xs text-zinc-800">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.Lorem Ipsum is simply dummy text of the printing and

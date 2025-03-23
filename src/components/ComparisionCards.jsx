@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import ComparisionCard from "./ComparisionCard";
-import bulbIcon from '../assets/images/bulbIcon.svg'
+import bulb from '../assets/images/bulb.svg'
 
 const cardsData = [
   {
@@ -45,7 +45,7 @@ const ComparisionCards = () => {
       {cardsData.map((card) => (
         <ComparisionCard
           key={card.id}
-          icon={bulbIcon}
+          icon={bulb}
           title={card.title}
           description={card.description}
           ctaText={card.ctaText}

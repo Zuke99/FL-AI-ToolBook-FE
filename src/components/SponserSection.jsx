@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import microsoftLogo from '../assets/images/microsoftLogo.svg'
 import SearchInput from "./SearchInput";
 
 
@@ -19,7 +19,7 @@ const SponserSection = () => {
       <div className="flex gap-5 max-w-full text-2xl leading-none text-zinc-800 ">
       <h2 className="grow">Title Sponsor</h2>
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfd0751a8942bec4543a9fdbf0ef296f328becf2?placeholderIfAbsent=true&apiKey=e36e175e43754e0299b4050c1061cdb5"
+        src={microsoftLogo}
         alt="Sponsor logo"
         className="object-contain shrink-0 max-w-full aspect-[4.65] w-[135px]"
       />
@@ -46,7 +46,7 @@ const SponserSection = () => {
 
       {/* <TopSearches tags={topSearchTags} /> */}
       <section className="flex flex-wrap gap-3 mt-6">
-      <h3 className="grow self-start text-base leading-none text-zinc-800">
+      <h3 className="grow self-center text-base leading-none text-zinc-800">
         Top Searches:
       </h3>
       <div className="flex flex-wrap flex-auto gap-1.5 text-xs leading-none text-black">

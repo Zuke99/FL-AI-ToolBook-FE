@@ -15,7 +15,7 @@ const TrendingCard = () => {
 
   return (
     <article className="rounded-none">
-      <div className="flex flex-wrap gap-4 p-1 m-2 rounded-xl bg-neutral-100">
+      <div className="flex flex-wrap gap-4 py-2 px-3 m-2 rounded-xl bg-neutral-100">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/777bb2ef584e1dc1a28945f37be34ad9f841fea0?placeholderIfAbsent=true&apiKey=e36e175e43754e0299b4050c1061cdb5"
           alt="Product thumbnail"

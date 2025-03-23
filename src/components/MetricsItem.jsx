@@ -13,7 +13,7 @@ const MetricsItem = ({
       <img
         src={iconSrc}
         alt={`${label} icon`}
-        className={`object-contain shrink-0 my-auto ${iconClassName}`}
+        className={`object-contain shrink-0 my-auto h-3 ${iconClassName}`}
       />
       <span className="text-zinc-500">{count}</span>
       <span className="text-zinc-800">{label}</span>

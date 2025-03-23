@@ -1,4 +1,5 @@
 import React , {useState} from 'react';
+import logo from '../assets/images/logo.svg'
 import NavLink from './NavLink';
 
 const Header = () => {
@@ -8,7 +9,6 @@ const Header = () => {
         setSearchTerm(e.target.value);
     };
     const handleLogin = () => {
-        // Login functionality would be implemented here
         console.log("Login button clicked");
       };
 
@@ -17,7 +17,7 @@ const Header = () => {
     <div className="flex flex-wrap gap-5 justify-between items-center px-8 py-2 border border-solid bg-[#f6f6f6] border-[#838383] rounded-[40px] max-md:px-5">
       {/* <Logo imageUrl="" /> */}
       <img
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/2e61b9e03bb38c8183126d871f3aac94c74a1d29?placeholderIfAbsent=true&apiKey=e36e175e43754e0299b4050c1061cdb5"
+      src={logo}
       alt="Logo"
       className="object-contain shrink-0 self-stretch my-auto max-w-full aspect-[4.17] w-[125px]"
     />
