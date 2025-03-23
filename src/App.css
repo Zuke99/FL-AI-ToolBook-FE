@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-calibri tracking-wide;
+   /* letterSpacing: '5em'; */
+}
+
