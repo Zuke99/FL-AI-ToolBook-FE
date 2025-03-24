@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header";
+import { BACKEND_URL } from "../utils/urls"; // Import the BACKEND_URL constant
 
 function AddAiToolForm() {
   const [formData, setFormData] = useState({
@@ -27,9 +28,7 @@ function AddAiToolForm() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:4000/api/categories/"
-        );
+        const response = await axios.get(`${BACKEND_URL}/categories/`); // Use BACKEND_URL
         setCategories(response.data); // Set the categories state with the fetched data
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -46,7 +45,7 @@ function AddAiToolForm() {
     if (selectedCategoryId) {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/categories/${selectedCategoryId}`
+          `${BACKEND_URL}/categories/${selectedCategoryId}` // Use BACKEND_URL
         );
         setSubCategories(response.data.subCategories); // Set the subcategories based on selected category
       } catch (error) {
@@ -126,7 +125,7 @@ function AddAiToolForm() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:4000/api/aitool/",
+        `${BACKEND_URL}/aitool/`, // Use BACKEND_URL
         completeData,
         {
           headers: {
