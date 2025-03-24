@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header";
 import { BACKEND_URL } from "../utils/urls"; // Import the BACKEND_URL constant
+import { ToastContainer, toast } from "react-toastify"; // Import ToastContainer and toast
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toast notifications
 
 function AddAiToolForm() {
   const [formData, setFormData] = useState({
@@ -134,14 +136,41 @@ function AddAiToolForm() {
         }
       );
       console.log(response.data);
+
+      // Show success toast
+      toast.success("Form submitted successfully!");
+
+      // Clear the form data
+      setFormData({
+        name: "",
+        categories: "",
+        subCategories: [],
+        url: "",
+        socialLinks: {
+          facebook: "",
+          linkedin: "",
+          instagram: "",
+          whatsapp: "",
+          youtube: "",
+        },
+        features: {
+          pros: [],
+          cons: [],
+        },
+      });
+
+      // Refresh the page after successful submission
+      window.location.reload();
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("Error submitting form. Please try again."); // Show error toast
     }
   };
 
   return (
     <>
       <Header />
+      <ToastContainer /> {/* Add ToastContainer to render toasts */}
       <div className="max-w-md mx-auto p-6 border border-gray-300 rounded-lg shadow-md">
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
