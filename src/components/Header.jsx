@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [showLoginForm, setShowLoginForm] = useState(false);
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -12,7 +13,7 @@ const Header = () => {
   };
 
   const handleLogin = () => {
-    console.log("Login button clicked");
+    navigate("/login");
   };
 
   const handleAddAiTool = () => {
@@ -54,7 +55,7 @@ const Header = () => {
         </div>
         <button
           onClick={handleLogin}
-          className="px-12 py-3 text-center  font-bold leading-none text-white whitespace-nowrap bg-sky-600 rounded-[30px] max-md:px-5"
+          className="px-12 py-3 text-center font-bold leading-none text-white whitespace-nowrap bg-sky-600 rounded-[30px] max-md:px-5"
         >
           Login
         </button>
