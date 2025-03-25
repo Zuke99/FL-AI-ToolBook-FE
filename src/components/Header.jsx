@@ -13,11 +13,15 @@ const Header = () => {
   };
 
   const handleLogin = () => {
-    navigate("/login");
+    navigate("/");
   };
 
   const handleAddAiTool = () => {
     navigate("/add-ai-tool");
+  };
+
+  const handleAddCategory = () => {
+    navigate("/add-category");
   };
 
   return (
@@ -49,7 +53,9 @@ const Header = () => {
         <NavLink text="Compare" />
         <NavLink text="Blog" />
         <NavLink text="Submit" />
-        <NavLink text="Promote" />
+        <div role="button" tabIndex="0" onClick={handleAddCategory}>
+          <NavLink text="Add Category" />
+        </div>
         <div role="button" tabIndex="0" onClick={handleAddAiTool}>
           <NavLink text="Add Ai-Tool" />
         </div>
